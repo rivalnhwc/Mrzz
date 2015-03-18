@@ -12,6 +12,7 @@ import com.freud.mrzz.R;
  */
 public class TopicActivity extends Activity {
     private TextView tvTopic ;
+    private int i ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class TopicActivity extends Activity {
         String str = b.getString("name");
         tvTopic = (TextView) findViewById(R.id.tv_Topic_topicaty);
         tvTopic.setText(str);
+
 
 
 

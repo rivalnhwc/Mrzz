@@ -13,7 +13,6 @@ public class Topic {
     private int reply_number;
     private int imageNum;
     private int model;
-    private int i;
 
     public Topic() {
         model = 0;
