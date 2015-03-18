@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#ffffc767">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/index_left_mainaty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="社交"
+            android:textColor="#FFFFDD"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/index_right_mainaty" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#FFFFFF">
+        <com.freud.mrzz.views.ColorTrackView
+
+            android:id="@+id/id_tab_first_socialfrag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            zhy:progress="1"
+            zhy:text="晒服装"
+            zhy:text_change_color="#ffffc767"
+            zhy:text_origin_color="#ff000000"
+            zhy:text_size="18sp" />
+
+        <com.freud.mrzz.views.ColorTrackView
+            android:id="@+id/id_tab_second_socialfrag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            zhy:text="晒美妆"
+            zhy:text_change_color="#ffffc767"
+            zhy:text_origin_color="#ff000000"
+            zhy:text_size="18sp" />
+
+        <com.freud.mrzz.views.ColorTrackView
+            android:id="@+id/id_tab_third_socialfrag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            zhy:text="灌水区"
+            zhy:text_change_color="#ffffc767"
+            zhy:text_origin_color="#ff000000"
+            zhy:text_size="18sp" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpSocial_mainAty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+</LinearLayout>
