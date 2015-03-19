@@ -54,18 +54,7 @@ public class communityFrag_socialFrag extends Fragment
         initDatas();
         initView(view);
 
-
-
         return view;
-
-		/*TextView tv = new TextView(getActivity());
-		tv.setTextSize(60);
-		Random r = new Random();
-		tv.setBackgroundColor(Color.argb(r.nextInt(120), r.nextInt(255),
-				r.nextInt(255), r.nextInt(255)));
-		tv.setText(mTitle);
-		tv.setGravity(Gravity.CENTER);
-		return tv;*/
 
 	}
 
@@ -74,12 +63,12 @@ public class communityFrag_socialFrag extends Fragment
 
         topicList = new ArrayList<Topic>();
 
-        Topic topic1 = new Topic("1号用户","1","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
-        Topic topic2 = new Topic("2号用户","2","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
-        Topic topic3 = new Topic("3号用户","3","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
-        Topic topic4 = new Topic("4号用户","4","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
-        Topic topic5 = new Topic("5号用户","5","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
-        Topic topic6 = new Topic("6号用户","6","是个发帖子的好时间","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic1 = new Topic("比尔盖茨","Microsoft","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic2 = new Topic("乔布斯","Apple","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic3 = new Topic("马云","阿里巴巴","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic4 = new Topic("李彦宏","百度",".....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic5 = new Topic("马化腾","腾讯","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+        Topic topic6 = new Topic("刘强东","京东","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
 
         topicList.add(topic1);
         topicList.add(topic2);
@@ -183,7 +172,7 @@ public class communityFrag_socialFrag extends Fragment
         protected void onPostExecute(String result)
         {
             if (true){
-                Topic topicn = new Topic(result+"号用户","天气haihao今天","是个发帖子的好时间","2015.3.16 16：38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
+                Topic topicn = new Topic(result,"....","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
                 topicList.add(topicn);
                 mAdapter.notifyDataSetChanged();
                 mPulltoRefreshListView.onRefreshComplete();

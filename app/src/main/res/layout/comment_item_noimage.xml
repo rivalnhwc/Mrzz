@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingBottom="5dp">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <com.freud.mrzz.views.CircleImageView
+            android:id="@+id/id_im_userhead_comment_itme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/tx_test"/>
+        <LinearLayout
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_tv_username_comment_itme"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李白"/>
+            <TextView
+                android:id="@+id/id_tv_timepublish_comment_itme"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1970.1.1"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/id_tv_floornum_comment_itme"
+            android:text="1楼"
+            android:textSize="17sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_tv_commentcontent_comment_itme"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="就连创作都能那么高端，被那么多人崇拜，我要选李白。"
+        android:textSize="16sp"/>
+
+
+
+</LinearLayout>
