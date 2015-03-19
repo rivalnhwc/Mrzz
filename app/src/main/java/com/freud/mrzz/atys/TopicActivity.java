@@ -11,8 +11,7 @@ import com.freud.mrzz.R;
  * Created by rival on 2015/3/16.
  */
 public class TopicActivity extends Activity {
-    private TextView tvTopic ;
-    private int i ;
+    private TextView tv_title_topbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,8 @@ public class TopicActivity extends Activity {
         Intent i = getIntent();
         Bundle b = i.getExtras();
         String str = b.getString("name");
-        tvTopic = (TextView) findViewById(R.id.tv_Topic_topicaty);
-        tvTopic.setText(str);
-
-
+        tv_title_topbar = (TextView) findViewById(R.id.id_tv_title_topbar_topicaty);
+        tv_title_topbar.setText(str);
 
 
     }

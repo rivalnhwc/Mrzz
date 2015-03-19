@@ -8,7 +8,8 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:background="#ffffc767">
+        android:background="@color/social_bgc"
+        >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -35,7 +36,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="30dp"
-        android:background="#FFFFFF">
+        android:background="@color/social_bgc">
         <com.freud.mrzz.views.ColorTrackView
 
             android:id="@+id/id_tab_first_socialfrag"
@@ -44,8 +45,8 @@
             android:layout_weight="1"
             zhy:progress="1"
             zhy:text="晒服装"
-            zhy:text_change_color="#ffffc767"
-            zhy:text_origin_color="#ff000000"
+            zhy:text_change_color="@color/social_text_color"
+            zhy:text_origin_color="#FFFFFF"
             zhy:text_size="18sp" />
 
         <com.freud.mrzz.views.ColorTrackView
@@ -54,8 +55,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             zhy:text="晒美妆"
-            zhy:text_change_color="#ffffc767"
-            zhy:text_origin_color="#ff000000"
+            zhy:text_change_color="@color/social_text_color"
+            zhy:text_origin_color="#FFFFFF"
             zhy:text_size="18sp" />
 
         <com.freud.mrzz.views.ColorTrackView
@@ -64,8 +65,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             zhy:text="灌水区"
-            zhy:text_change_color="#ffffc767"
-            zhy:text_origin_color="#ff000000"
+            zhy:text_change_color="@color/social_text_color"
+            zhy:text_origin_color="#FFFFFF"
             zhy:text_size="18sp" />
 
     </LinearLayout>

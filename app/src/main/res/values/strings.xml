@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <color name="social_bgc">#ffffd760</color>
+    <color name="social_text_color">#ffc4fcb8</color>
 </resources>
