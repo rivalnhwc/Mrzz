@@ -104,6 +104,7 @@ public class communityFrag_socialFrag extends Fragment
                 Intent i = new Intent(getActivity(),com.freud.mrzz.atys.TopicActivity.class);
                 Bundle b = new Bundle();
                 b.putString("name",topic.getTopic_name());
+                b.putString("user_name",topic.getUser_name());
                 i.putExtras(b);
                 startActivity(i);
             }

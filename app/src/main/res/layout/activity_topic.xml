@@ -9,11 +9,12 @@
         android:background="@color/social_bgc"
         >
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/id_ib_getback_topicaty"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+            android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
 
         <TextView
             android:id="@+id/id_tv_title_topbar_topicaty"
@@ -24,13 +25,14 @@
             android:textColor="#FFFFDD"
             android:textSize="22sp" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/id_ib_share_topicaty"
             android:layout_marginRight="3dp"
             android:layout_marginTop="3dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+            android:background="@drawable/abc_ic_menu_share_mtrl_alpha" />
 
     </RelativeLayout>
 

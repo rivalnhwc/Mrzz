@@ -49,10 +49,9 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
             viewHolder.im_userhead.setImageResource(comment.getImageID_userhead());
             viewHolder.tv_username.setText(comment.getUser_name());
             viewHolder.tv_content.setText(comment.getContent());
-            viewHolder.tv_floor_num.setText(comment.getFloor_num());
             viewHolder.tv_timepulish.setText(comment.getTime_publish());
         }
-
+        viewHolder.tv_floor_num.setText((position+2)+"楼");
         return view;
     }
 
