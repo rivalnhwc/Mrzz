@@ -24,6 +24,7 @@
             android:textSize="22sp" />
 
         <ImageView
+            android:id="@+id/iv_topersonalaty_indexfrag_mainaty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

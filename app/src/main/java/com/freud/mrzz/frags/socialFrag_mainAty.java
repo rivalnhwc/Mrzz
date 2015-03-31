@@ -1,13 +1,15 @@
 package com.freud.mrzz.frags;
 
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.freud.mrzz.R;
 import com.freud.mrzz.views.ColorTrackView;
@@ -25,6 +27,7 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
     private communityFrag_socialFrag[] mFragments = new communityFrag_socialFrag[mTitles.length];
     private List<ColorTrackView> mTabs = new ArrayList<ColorTrackView>();
     private ColorTrackView id_tab_first_socialfrag,id_tab_second_socialfrag,id_tab_third_socialfrag;
+    private ImageView iv_topersonalaty_socialfrag;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -96,10 +99,12 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
         id_tab_first_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_first_socialfrag);
         id_tab_second_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_second_socialfrag);
         id_tab_third_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_third_socialfrag);
+        iv_topersonalaty_socialfrag = (ImageView) view.findViewById(R.id.iv_topersonalaty_socailfrag_mainaty);
 
         id_tab_first_socialfrag.setOnClickListener(this);
         id_tab_second_socialfrag.setOnClickListener(this);
         id_tab_third_socialfrag.setOnClickListener(this);
+        iv_topersonalaty_socialfrag.setOnClickListener(this);
 
         mTabs.add((ColorTrackView) view.findViewById(R.id.id_tab_first_socialfrag));
         mTabs.add((ColorTrackView) view.findViewById(R.id.id_tab_second_socialfrag));
@@ -123,6 +128,10 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
             case R.id.id_tab_third_socialfrag:
                 mTabs.get(2).setProgress(1.0f);
                 vpSocial_mainAty.setCurrentItem(2,false);
+                break;
+            case R.id.iv_topersonalaty_socailfrag_mainaty:
+                Intent i = new Intent(this.getActivity(), com.freud.mrzz.atys.PersonalActivity.class);
+                startActivity(i);
                 break;
         }
 
