@@ -1,30 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="#ff81b2ff">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_left_mainaty"
-            android:layout_alignParentLeft="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="#FFFFDD"
-            android:textSize="22sp"
-            android:text="美妆"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_right_mainaty"
-            android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/tv_skin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="肤质"
+        android:textSize="36dp"
+        android:textStyle="bold"/>
 
-    </RelativeLayout>
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="30dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/tv_skin">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_skin1"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0f000000"
+                android:padding="10dp"
+                android:tag="1">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中性皮肤"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/checked"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_checked_skin1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中性皮肤是健康理想的皮肤，多见于青春发育期的少女。皮脂分泌量适中，皮肤既不干，也不油，皮肤红润细腻、光滑、富有弹性，不易起皱，毛孔较小，对外界刺激不敏感。但受季节影响，夏天趋于油性，冬季趋于干性。" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_skin2"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0f000000"
+                android:padding="10dp"
+                android:tag="2">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="干性皮肤"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/checked"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_checked_skin2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="干性皮肤白皙，毛孔细小而不明显。皮脂分泌量少，皮肤比较干燥，容易产生细小皱纹。角质层含水量低于10%，毛细血管表浅，易破裂，对外界刺激比较敏感。干性皮肤可分缺水性和缺油性两种。" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_skin3"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0f000000"
+                android:padding="10dp"
+                android:tag="3">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="油性皮肤"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/checked"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_checked_skin3"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="油性皮肤肤色较深，毛孔粗大，皮脂分泌量多，皮肤油腻光亮，不容易起皱纹，对外界刺激不敏感。由于皮脂分泌过多，容易生粉刺、痤疮，常见于青春发育期年轻人。" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_skin4"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0f000000"
+                android:padding="10dp"
+                android:tag="4">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="混合性皮肤"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/checked"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_checked_skin4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="混合性皮肤兼有油性皮肤和干性皮肤的特征，在面部T型区（前额、鼻、口周）呈油性状态，眼部及两颊呈干性。" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_skin5"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:background="#0f000000"
+                android:padding="10dp"
+                android:tag="5">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="敏感性皮肤"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/checked"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_checked_skin5"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="敏感性皮肤，可见于上述各种皮肤，其皮肤较薄，对外界刺激很敏感。当受到外界刺激时，会出现局部微红、红肿，出现高于皮肤的疱、块及刺痒等症状。" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

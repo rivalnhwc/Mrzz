@@ -1,52 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="bottom|left"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
     >
 
-
     <RelativeLayout
-        android:id="@+id/rl_body"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true">
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="25dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/iv_body"
-            android:src="@drawable/women"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="身高&amp;体重"
+        android:textSize="36dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/iv_body"
+        android:src="@drawable/body1"
+        android:paddingBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_height"
+        android:src="@drawable/scale"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="25dp"
+        android:textSize="18dp"
+        android:text="身\n高\ncm"
+        android:layout_alignTop="@+id/iv_height"
+        android:layout_alignLeft="@+id/iv_height"
+        android:layout_alignStart="@+id/iv_height" />
+
+    <LinearLayout
+        android:id="@+id/ll_height"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_height"
+        android:layout_alignRight="@+id/iv_height"
+        android:layout_alignEnd="@+id/iv_height"
+        android:gravity="right">
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/bt_height"
-            android:background="#00000000"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/bt_height1" />
 
         <Button
             android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:id="@+id/bt_weight_left"
-            android:background="#00000000"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_height="40dp"
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/bt_height2" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/iv_weight"
+        android:layout_margin="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/scale_h"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingLeft="10dp"
+        android:text="体重kg"
+        android:textSize="18dp"
+        android:layout_alignTop="@+id/iv_weight"
+        android:layout_alignLeft="@+id/iv_weight"
+        android:layout_alignStart="@+id/iv_weight" />
+
+    <LinearLayout
+        android:id="@+id/ll_weight"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_weight"
+        android:layout_alignLeft="@+id/iv_weight"
+        android:layout_alignBottom="@+id/iv_weight"
+        android:gravity="bottom">
 
         <Button
             android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:id="@+id/bt_weight_right"
-            android:background="#00000000"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_height="40dp"
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/bt_weight1" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/bt_weight2" />
+    </LinearLayout>
+
+
     </RelativeLayout>
+
+
 </RelativeLayout>

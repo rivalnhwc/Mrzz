@@ -10,7 +10,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:text="穿衣风格"
+        android:text="肤色"
         android:textSize="36dp"
         android:textStyle="bold"/>
 
@@ -35,20 +35,20 @@
                 android:layout_margin="5dp">
 
                 <TextView
-                    android:id="@+id/tv_shape1"
+                    android:id="@+id/tv_color1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="rectangle"
+                    android:text="象牙白"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/shape_rectangle"
-                    android:id="@+id/iv_shape1"
+                    android:src="@drawable/color_xiangyabai"
+                    android:id="@+id/iv_color1"
                     android:adjustViewBounds="true"
-                    android:layout_above="@id/tv_shape1"
+                    android:layout_above="@id/tv_color1"
                     android:scaleType="fitXY"
                     android:tag="1"/>
 
@@ -56,10 +56,10 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/iv_shape_check1"
+                    android:id="@+id/iv_color_check1"
                     android:src="@drawable/checked"
                     android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/iv_shape1"
+                    android:layout_alignRight="@+id/iv_color1"
                     android:adjustViewBounds="true" />
 
             </RelativeLayout>
@@ -69,20 +69,20 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp">
                 <TextView
-                    android:id="@+id/tv_shape2"
+                    android:id="@+id/tv_color2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="pear"
+                    android:text="暖杏色"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/shape_pear"
-                    android:id="@+id/iv_shape2"
+                    android:src="@drawable/color_nuanxingse"
+                    android:id="@+id/iv_color2"
                     android:adjustViewBounds="true"
-                    android:layout_above="@id/tv_shape2"
+                    android:layout_above="@id/tv_color2"
                     android:scaleType="fitXY"
                     android:tag="2"/>
 
@@ -90,10 +90,10 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/iv_shape_check2"
+                    android:id="@+id/iv_color_check2"
                     android:src="@drawable/checked"
                     android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/iv_shape2"
+                    android:layout_alignRight="@+id/iv_color2"
                     android:adjustViewBounds="true"
                     android:visibility="gone"/>
 
@@ -104,20 +104,20 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp">
                 <TextView
-                    android:id="@+id/tv_shape3"
+                    android:id="@+id/tv_color3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="hourglass"
+                    android:text="粉嫩色"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/shape_hourglass"
-                    android:id="@+id/iv_shape3"
+                    android:src="@drawable/color_fennense"
+                    android:id="@+id/iv_color3"
                     android:adjustViewBounds="true"
-                    android:layout_above="@id/tv_shape3"
+                    android:layout_above="@id/tv_color3"
                     android:scaleType="fitXY"
                     android:tag="3"/>
 
@@ -125,10 +125,10 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/iv_shape_check3"
+                    android:id="@+id/iv_color_check3"
                     android:src="@drawable/checked"
                     android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/iv_shape3"
+                    android:layout_alignRight="@+id/iv_color3"
                     android:adjustViewBounds="true"
                     android:visibility="gone"/>
             </RelativeLayout>
@@ -147,20 +147,20 @@
                 android:layout_margin="5dp">
 
                 <TextView
-                    android:id="@+id/tv_shape4"
+                    android:id="@+id/tv_color4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="apple"
+                    android:text="自然色"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iv_shape4"
-                    android:src="@drawable/shape_apple"
+                    android:id="@+id/iv_color4"
+                    android:src="@drawable/color_ziranse"
                     android:adjustViewBounds="true"
-                    android:layout_above="@id/tv_shape4"
+                    android:layout_above="@id/tv_color4"
                     android:scaleType="fitXY"
                     android:tag="4"/>
 
@@ -168,10 +168,10 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/iv_shape_check4"
+                    android:id="@+id/iv_color_check4"
                     android:src="@drawable/checked"
                     android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/iv_shape4"
+                    android:layout_alignRight="@+id/iv_color4"
                     android:adjustViewBounds="true"
                     android:visibility="gone"/>
             </RelativeLayout>
@@ -182,20 +182,20 @@
                 android:layout_margin="5dp">
 
                 <TextView
-                    android:id="@+id/tv_shape5"
+                    android:id="@+id/tv_color5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="banana"
+                    android:text="胭脂粉"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iv_shape5"
-                    android:src="@drawable/shape_banana"
+                    android:id="@+id/iv_color5"
+                    android:src="@drawable/color_yanzhifen"
                     android:adjustViewBounds="true"
-                    android:layout_above="@id/tv_shape5"
+                    android:layout_above="@id/tv_color5"
                     android:scaleType="fitXY"
                     android:tag="5"/>
 
@@ -203,10 +203,44 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/iv_shape_check5"
+                    android:id="@+id/iv_color_check5"
                     android:src="@drawable/checked"
                     android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/iv_shape5"
+                    android:layout_alignRight="@+id/iv_color5"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_color6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="麦芽色"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_color6"
+                    android:src="@drawable/color_yanzhifen"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color6"
+                    android:scaleType="fitXY"
+                    android:tag="6"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check6"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color6"
                     android:adjustViewBounds="true"
                     android:visibility="gone"/>
             </RelativeLayout>

@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="#ff81b2ff">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_left_mainaty"
-            android:layout_alignParentLeft="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="#FFFFDD"
-            android:textSize="22sp"
-            android:text="美妆"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_body"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_right_mainaty"
-            android:layout_alignParentRight="true"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_height"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    </RelativeLayout>
-</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_height"
+        android:layout_alignRight="@+id/iv_height"
+        android:layout_alignEnd="@+id/iv_height"
+        android:gravity="right">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/button" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="50.9"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:background="@drawable/body_test_button"
+            android:id="@+id/button2" />
+    </LinearLayout>
+
+</RelativeLayout>
