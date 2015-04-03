@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mrzz</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Mrzz</string>
     <string name="action_settings">Settings</string>
-    <color name="social_bgc">#ffffd760</color>
-    <color name="social_text_color">#ffc4fcb8</color>
+    <string name="title_activity_test">TestActivity</string>
+
 </resources>

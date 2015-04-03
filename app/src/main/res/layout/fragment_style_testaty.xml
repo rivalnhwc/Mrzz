@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="穿衣风格"
+        android:textSize="36dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:paddingBottom="50dp"
+        android:layout_height="370dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_shape1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rectangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_rectangle"
+                    android:id="@+id/iv_shape1"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_shape1"
+                    android:scaleType="fitXY"
+                    android:tag="1"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_shape_check1"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_shape1"
+                    android:adjustViewBounds="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/tv_shape2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_pear"
+                    android:id="@+id/iv_shape2"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_shape2"
+                    android:scaleType="fitXY"
+                    android:tag="2"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_shape_check2"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_shape2"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/tv_shape3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hourglass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_hourglass"
+                    android:id="@+id/iv_shape3"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_shape3"
+                    android:scaleType="fitXY"
+                    android:tag="3"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_shape_check3"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_shape3"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_shape4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="apple"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_shape4"
+                    android:src="@drawable/shape_apple"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_shape4"
+                    android:scaleType="fitXY"
+                    android:tag="4"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_shape_check4"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_shape4"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_shape5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="banana"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_shape5"
+                    android:src="@drawable/shape_banana"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_shape5"
+                    android:scaleType="fitXY"
+                    android:tag="5"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_shape_check5"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_shape5"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
