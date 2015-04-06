@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.freud.mrzz.R;
+import com.freud.mrzz.atys.LoginActivity;
 import com.freud.mrzz.atys.PersonalActivity;
 
 /**
@@ -16,13 +17,15 @@ import com.freud.mrzz.atys.PersonalActivity;
  */
 public class indexFrag_mainAty extends Fragment implements View.OnClickListener {
 
-    private ImageView iv_personal;
+    private ImageView iv_personal,iv_login_register;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_index_mainaty, container, false);
 
         iv_personal = (ImageView) view.findViewById(R.id.iv_topersonalaty_indexfrag_mainaty);
+        iv_login_register = (ImageView) view.findViewById(R.id.iv_login_register_indexfrag);
         iv_personal.setOnClickListener(this);
+        iv_login_register.setOnClickListener(this);
         return view;
     }
 
@@ -32,6 +35,10 @@ public class indexFrag_mainAty extends Fragment implements View.OnClickListener 
             case R.id.iv_topersonalaty_indexfrag_mainaty:
                 Intent i = new Intent(getActivity(), PersonalActivity.class);
                 startActivity(i);
+                break;
+            case R.id.iv_login_register_indexfrag:
+                Intent i2 = new Intent(getActivity(), LoginActivity.class);
+                startActivity(i2);
                 break;
         }
     }

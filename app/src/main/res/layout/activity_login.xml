@@ -37,7 +37,9 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/login_register_edit_margin"
+            android:layout_marginLeft="@dimen/login_register_edit_margin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
@@ -67,7 +69,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/login_register_edit_margin"
+            android:layout_marginRight="@dimen/login_register_edit_margin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
@@ -107,28 +111,30 @@
             android:text="忘记密码？"
             android:textColor="#ff499ea4" />
         <TextView
+            android:id="@+id/tv_login_loginaty"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:background="#ff64d9e1"
-            android:layout_margin="15dp"
+            android:layout_margin="@dimen/login_register_edit_margin"
             android:text="登陆"
             android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/tv_register_loginaty"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:background="#ff6ff0f9"
-            android:layout_margin="15dp"
+            android:layout_margin="@dimen/login_register_edit_margin"
             android:text="注册"
             android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_gravity="center"
-            android:text="--------------------快速登陆--------------------"
+            android:text="--------------------  快速登陆  --------------------"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <LinearLayout
@@ -146,6 +152,20 @@
                 android:id="@+id/iv_qq_loginaty"
                 android:layout_gravity="center"
                 android:src="@drawable/image_qq_loginaty"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_weixin_loginaty"
+                android:layout_gravity="center"
+                android:src="@drawable/image_weixin_loginaty"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_taobao_loginaty"
+                android:layout_gravity="center"
+                android:src="@drawable/image_taobao_loginaty"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content" />
