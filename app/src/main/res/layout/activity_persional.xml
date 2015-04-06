@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_test" />
+            android:background="@drawable/bg_test_personaty" />
 
         <com.freud.mrzz.views.CircleImageView
             android:layout_width="100dp"
