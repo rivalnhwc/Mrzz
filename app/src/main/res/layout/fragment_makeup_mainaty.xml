@@ -5,26 +5,30 @@
     >
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="#ff81b2ff">
+        android:layout_height="46dp"
+        android:background="@color/pink">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_left_mainaty"
-            android:layout_alignParentLeft="true"/>
+            android:layout_margin="9dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_mine_light" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textColor="#FFFFDD"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:text="美妆"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/index_right_mainaty"
-            android:layout_alignParentRight="true"/>
+            android:layout_margin="9dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_shopping_car_light" />
 
     </RelativeLayout>
 </LinearLayout>

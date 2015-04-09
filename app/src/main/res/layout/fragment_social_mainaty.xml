@@ -7,36 +7,40 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:background="@color/social_bgc"
+        android:layout_height="46dp"
+        android:background="@color/pink"
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/index_left_mainaty" />
+            android:src="@drawable/btn_mine_light" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="社交"
-            android:textColor="#FFFFDD"
+            android:textColor="@color/white"
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/index_right_mainaty" />
+            android:src="@drawable/btn_shopping_car_light" />
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="30dp"
-        android:background="@color/social_bgc">
+        android:background="@color/pink">
         <com.freud.mrzz.views.ColorTrackView
 
             android:id="@+id/id_tab_first_socialfrag"

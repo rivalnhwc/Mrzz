@@ -1,9 +1,11 @@
 package com.freud.mrzz.views;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
 
 public class MyViewPager extends ViewPager {
     private boolean willIntercept= true;
