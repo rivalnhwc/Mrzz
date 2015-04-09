@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:background="#ffcaffa0">
@@ -187,5 +187,5 @@
                 android:text="我的爱好" />
         </RelativeLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>

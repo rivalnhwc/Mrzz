@@ -11,7 +11,6 @@ import com.freud.mrzz.R;
 /**
  * Created by rival on 2015/4/6.
  */
-//登陆界面
 public class LoginActivity extends Activity implements View.OnClickListener {
     private TextView tv_login,tv_register;
     @Override
