@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.freud.mrzz.R;
+import com.freud.mrzz.adapter.MyPagerAdapter;
 import com.freud.mrzz.frags.ageTestFrag_testAty;
 import com.freud.mrzz.frags.bodyTestFrag_testAty;
 import com.freud.mrzz.frags.colorTestFrag_testAty;
@@ -35,7 +36,7 @@ import com.freud.mrzz.views.MyViewPager;
 public class TestActivity extends ActionBarActivity {
 
     private MyViewPager pager;
-    private MyPagerAdapter adapter;
+    private TestAtyPagerAdapter adapter;
     ImageView[] indicater;
 
     @Override
@@ -49,7 +50,7 @@ public class TestActivity extends ActionBarActivity {
         indicater[3]=(ImageView) findViewById(R.id.iv_indicater4);
         indicater[4]=(ImageView) findViewById(R.id.iv_indicater5);
         pager = (MyViewPager) findViewById(R.id.pager_testaty);
-        adapter = new MyPagerAdapter(getSupportFragmentManager());
+        adapter = new TestAtyPagerAdapter(getSupportFragmentManager());
         pager.setOffscreenPageLimit(5);
         adapter.notifyDataSetChanged();
         pager.setAdapter(adapter);
@@ -83,11 +84,11 @@ public class TestActivity extends ActionBarActivity {
         });// 页面改变监听器
     }
 
-    public class MyPagerAdapter extends FragmentPagerAdapter
+    public class TestAtyPagerAdapter extends FragmentPagerAdapter
     {
         public Fragment bodyFrag, styleFrag, skinFrag,shapeFrag,colorFrag;
 
-        public MyPagerAdapter(FragmentManager fm)
+        public TestAtyPagerAdapter(FragmentManager fm)
         {
             super(fm);
             bodyFrag=new bodyTestFrag_testAty();
