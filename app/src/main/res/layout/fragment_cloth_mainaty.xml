@@ -1,56 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="46dp"
-        android:background="@color/pink">
+        android:layout_height="45dp"
+        android:background="#ffff9dbf">
         <ImageView
-            android:layout_margin="9dp"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/btn_mine_light" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/index_left_mainaty"
+            android:layout_alignParentLeft="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
+            android:textColor="#FFFFDD"
             android:textSize="22sp"
             android:text="衣服"/>
+
         <ImageView
-            android:layout_margin="9dp"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/btn_shopping_car_light" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/index_right_mainaty"
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        >
-    <com.freud.mrzz.views.PagerSlidingTabStrip
-        android:id="@+id/tabs_clothes_categories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:pstsPaddingMiddle="false"/>
-
-    </FrameLayout>
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager_colthes_categories"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
 </LinearLayout>

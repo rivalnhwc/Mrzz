@@ -8,17 +8,9 @@
         android:id="@+id/id_bottombar"
         layout="@layout/bottom_bar_mainaty"></include>
 
-    <TextView
-        android:id="@+id/tv_divider_mainaty"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#5a000000"
-        android:layout_above="@id/id_bottombar"/>
-
     <FrameLayout
         android:id="@+id/id_Content_mainAty"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#ffffff"
-        android:layout_above="@id/tv_divider_mainaty"></FrameLayout>
+        android:layout_above="@id/id_bottombar"></FrameLayout>
 </RelativeLayout>

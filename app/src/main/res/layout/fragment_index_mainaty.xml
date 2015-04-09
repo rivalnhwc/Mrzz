@@ -6,32 +6,28 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="46dp"
-        android:background="@color/pink">
+        android:layout_height="45dp"
+        android:background="#ff7dce5b">
 
         <ImageView
-            android:layout_margin="9dp"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/btn_mine_light" />
+            android:src="@drawable/index_left_mainaty" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="首页"
-            android:textColor="@color/white"
+            android:textColor="#FFFFDD"
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_margin="9dp"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/btn_shopping_car_light" />
+            android:src="@drawable/index_right_mainaty" />
 
     </RelativeLayout>
     <com.freud.mrzz.views.CircleImageView

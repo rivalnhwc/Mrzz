@@ -1,106 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="50dp"
+    android:layout_height="60dp"
     android:layout_alignParentBottom="true"
     android:background="#FEFEFE">
 <LinearLayout
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:background="#ffffff"
-    android:layout_height="50dp">
+    android:layout_height="60dp">
     <LinearLayout
-        android:id="@+id/ll_bottom_tab_index"
+        android:id="@+id/id_bottom_tab_index"
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:descendantFocusability="beforeDescendants"
-        android:gravity="center"
-        >
-        <ImageView
+        android:gravity="center">
+        <ImageButton
             android:id="@+id/btn_bottom_tab_index_mainAty"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/tab_home_select"
-            />
-        <TextView
-            android:id="@+id/tv_bottom_tab_index_mainAty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/pink"
-            android:textSize="12dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/tab_weixin_pressed"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="首页"/>
 
         </LinearLayout>
     <LinearLayout
-        android:id="@+id/ll_bottom_tab_cloth"
+        android:id="@+id/id_bottom_tab_cloth"
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:descendantFocusability="beforeDescendants"
         android:gravity="center">
-        <ImageView
+        <ImageButton
             android:id="@+id/btn_bottom_tab_cloth_mainAty"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/tab_cloth_unselect"
-            />
-        <TextView
-            android:id="@+id/tv_bottom_tab_cloth_mainAty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="12dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/tab_address_normal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="服装"/>
 
         </LinearLayout>
     <LinearLayout
-        android:id="@+id/ll_bottom_tab_makeup"
+        android:id="@+id/id_bottom_tab_makeup"
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center">
-        <ImageView
+        <ImageButton
             android:id="@+id/btn_bottom_tab_makeup_mainAty"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/tab_makeup_unselect"
-            />
-        <TextView
-            android:id="@+id/tv_bottom_tab_makeup_mainAty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="12dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/tab_settings_normal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="美妆"/>
 
         </LinearLayout>
     <LinearLayout
-        android:id="@+id/ll_bottom_tab_social"
+        android:id="@+id/id_bottom_tab_social"
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center">
-        <ImageView
+        <ImageButton
             android:id="@+id/btn_bottom_tab_social_mainAty"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/tab_social_unselect"
-            />
-        <TextView
-            android:id="@+id/tv_bottom_tab_social_mainAty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="12dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/tab_find_frd_normal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="社区"/>
 
         </LinearLayout>
