@@ -10,6 +10,7 @@
         android:background="@color/pink">
 
         <ImageView
+            android:id="@+id/iv_login_indexfrag_mainaty"
             android:layout_margin="9dp"
             android:layout_width="28dp"
             android:layout_height="28dp"
