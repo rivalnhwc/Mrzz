@@ -173,6 +173,7 @@ public class communityFrag_socialFrag extends Fragment
         protected void onPostExecute(String result)
         {
             if (true){
+                //TODO
                 Topic topicn = new Topic(result,"....","....","16:38",R.drawable.tx_test,R.drawable.sheep_pulltorefresh,233,3);
                 topicList.add(topicn);
                 mAdapter.notifyDataSetChanged();

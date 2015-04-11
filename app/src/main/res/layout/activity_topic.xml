@@ -7,7 +7,6 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:background="@color/social_bgc"
         >
 
         <ImageButton
