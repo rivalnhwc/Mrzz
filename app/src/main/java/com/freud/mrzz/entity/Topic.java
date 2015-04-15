@@ -4,23 +4,18 @@ package com.freud.mrzz.entity;
  * Created by rival on 2015/3/11.
  */
 public class Topic {
-    private String user_name;
-    private String topic_name;
-    private String content;
-    private String time_publish;
-    private int imageID_userhead;
-    private int imageID_content;
-    private int reply_number;
-    private int imageNum;
-    private int model;
+    public String user_name;
+    public String topic_name;
+    public String content;
+    public String time_publish;
+    public String imageID_userhead;
+    public String imageID_content;
+    public int reply_number;
+    public int imageNum;
 
-    public Topic() {
-        model = 0;
-    }
 
-    public Topic(String user_name, String topic_name, String content, String time_publish, int imageID_userhead, int imageID_content, int reply_number, int imageNum) {
+    public Topic(String user_name, String topic_name, String content, String time_publish, String imageID_userhead, String imageID_content, int reply_number, int imageNum) {
 
-        model = 1;
         this.user_name = user_name;
         this.topic_name = topic_name;
         this.content = content;
@@ -31,11 +26,11 @@ public class Topic {
         this.imageNum = imageNum;
     }
 
-    public int getImageID_userhead() {
+    public String getImageID_userhead() {
         return imageID_userhead;
     }
 
-    public int getImageID_content() {
+    public String getImageID_content() {
         return imageID_content;
     }
 
@@ -63,7 +58,5 @@ public class Topic {
         return imageNum;
     }
 
-    public int getModel() {
-        return model;
-    }
+
 }

@@ -92,6 +92,7 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
     }
     private void initViews(View view){
         vpSocial_mainAty = (ViewPager) view.findViewById(R.id.vpSocial_mainAty);
+        vpSocial_mainAty.setOffscreenPageLimit(3);
 
         id_tab_first_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_first_socialfrag);
         id_tab_second_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_second_socialfrag);
