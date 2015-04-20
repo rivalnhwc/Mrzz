@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.freud.mrzz.R;
@@ -12,7 +13,7 @@ import com.freud.mrzz.R;
  * Created by rival on 2015/4/6.
  */
 public class LoginActivity extends Activity implements View.OnClickListener {
-    private TextView tv_login,tv_register;
+    private Button tv_login,tv_register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
     private void initView() {
-        tv_login = (TextView) findViewById(R.id.tv_login_loginaty);
-        tv_register = (TextView) findViewById(R.id.tv_register_loginaty);
+        tv_login = (Button) findViewById(R.id.tv_login_loginaty);
+        tv_register = (Button) findViewById(R.id.tv_register_loginaty);
         tv_register.setOnClickListener(this);
     }
 

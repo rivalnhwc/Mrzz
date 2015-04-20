@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView的头部 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:id="@+id/ll_btns_container"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+        android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/btn_index_1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="团购"
+        android:textColor="#a7e151"
+        android:gravity="center"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/btn_index_2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="风尚"
+            android:textColor="#f872b6"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/btn_index_3"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="美妆"
+            android:textColor="#fac441"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/btn_index_4"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="定制"
+            android:textColor="#e73c48"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/btn_index_5"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="搭配"
+            android:textColor="#3cd7c5"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

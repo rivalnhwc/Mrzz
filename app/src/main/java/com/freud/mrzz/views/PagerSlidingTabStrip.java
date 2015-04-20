@@ -25,7 +25,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -47,6 +46,7 @@ import android.widget.TextView;
 
 import com.freud.mrzz.R;
 import com.freud.mrzz.adapter.MyPagerAdapter;
+import com.freud.mrzz.utils.ImageLoader;
 
 import java.util.Locale;
 
@@ -266,7 +266,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             }
 
             CharSequence title = pager.getAdapter().getPageTitle(i);
-            Drawable icon=((MyPagerAdapter)pager.getAdapter()).getPageIcon(i);
+            String icon=((MyPagerAdapter)pager.getAdapter()).getPageIcon(i);
             addTab(i, title,icon, tabView);
         }
 
@@ -292,14 +292,15 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         });
     }
 
-    private void addTab(final int position, CharSequence title,Drawable icon, View tabView) {
+    private void addTab(final int position, CharSequence title,String icon, View tabView) {
         ImageView iv_icon=(ImageView) tabView.findViewById(R.id.iv_tab_icon);
         TextView textView = (TextView) tabView.findViewById(R.id.tv_tab_title);
         if (textView != null&&icon!=null) {
             if (title != null)
             {
                 textView.setText(title);
-                iv_icon.setImageDrawable(icon);
+                ImageLoader.getInstance(getContext()).DisplayImage(icon,iv_icon);
+//                iv_icon.setImage(icon);
             }
             float alpha = pager.getCurrentItem() == position ? tabTextSelectedAlpha : tabTextAlpha;
             ViewCompat.setAlpha(textView, alpha);
