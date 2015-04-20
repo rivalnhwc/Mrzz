@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.freud.mrzz.R;
-import com.freud.mrzz.adapter.MyPagerAdapter;
-import com.freud.mrzz.frags.ageTestFrag_testAty;
 import com.freud.mrzz.frags.bodyTestFrag_testAty;
 import com.freud.mrzz.frags.colorTestFrag_testAty;
 import com.freud.mrzz.frags.shapeTestFrag_testAty;
@@ -71,9 +68,9 @@ public class TestActivity extends ActionBarActivity {
                 for(int x=0;x<indicater.length;x++)
                 {
                     if(i==x)
-                    indicater[x].setImageResource(R.drawable.indicater_selected);
+                    indicater[x].setImageResource(R.drawable.test_indicater_selected);
                     else
-                        indicater[x].setImageResource(R.drawable.indicater_unselected);
+                        indicater[x].setImageResource(R.drawable.test_indicater_unselected);
                 }
             }
 

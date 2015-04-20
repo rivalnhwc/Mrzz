@@ -1,5 +1,6 @@
 package com.freud.mrzz.adapter;
 
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,10 +10,10 @@ import com.freud.mrzz.R;
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
     private String[] TITLES;
-    private Drawable[] ICONS;
+    private String[] ICONS;
     public Fragment[] FRAGMENTS;
 
-    public MyPagerAdapter(FragmentManager fm, String[] titles, Drawable[] icons, Fragment[] fragments) {
+    public MyPagerAdapter(FragmentManager fm, String[] titles, String[] icons, Fragment[] fragments) {
         super(fm);
         this.FRAGMENTS = fragments;
         this.ICONS = icons;
@@ -20,7 +21,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     }
 
-    public Drawable getPageIcon(int position) {
+    public String getPageIcon(int position) {
         return ICONS[position];
     }
 

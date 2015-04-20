@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="config_button_exit_animation_time">0</integer>
+    <integer name="config_button_enter_animation_time">0</integer>
+
+</resources>
