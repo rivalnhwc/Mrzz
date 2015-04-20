@@ -1,20 +1,16 @@
 package com.freud.mrzz.frags;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.freud.mrzz.R;
 import com.freud.mrzz.adapter.ClothListAdapter;
+import com.freud.mrzz.views.clothCategoriesView;
 import com.staggeredgrid.library.ExtendableListView;
 import com.staggeredgrid.library.StaggeredGridView;
 
@@ -141,7 +137,7 @@ int count=0;
         });
         LayoutInflater layoutInflater = getActivity().getLayoutInflater();
 
-        header1 = layoutInflater.inflate(R.layout.category_view_sub_cloth_frg, null);
+        header1 = new clothCategoriesView(getActivity());
 
         gridView.addHeaderView(header1);
 

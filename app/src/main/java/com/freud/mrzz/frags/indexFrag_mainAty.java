@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import com.freud.mrzz.R;
 import com.freud.mrzz.adapter.IndexListAdapter;
 import com.freud.mrzz.atys.LoginActivity;
+import com.freud.mrzz.atys.TestActivity;
 import com.freud.mrzz.views.AdsView;
 import com.freud.mrzz.views.IndexBtnsView;
 import com.freud.mrzz.views.PullToRefreshListView;
@@ -49,7 +50,8 @@ public class indexFrag_mainAty extends Fragment{
         iv_shoppingcar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ads.setVisibility(View.GONE);
+                Intent intent = new Intent(getActivity(), TestActivity.class);
+                startActivity(intent);
             }
         });
 
