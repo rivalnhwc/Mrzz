@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="@dimen/login_register_edit_margin"
+    android:layout_marginRight="@dimen/login_register_edit_margin"
+    android:background="@drawable/login_reg_border"
+    android:orientation="vertical" >
+
+    <TextView
+        android:textColor="@color/pink"
+        android:id="@+id/tv_shaimeizhuang_popup_pubaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:text="晒美妆"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#333333" />
+
+    <TextView
+        android:textColor="@color/pink"
+        android:id="@+id/tv_shaifuzhuang_popup_pubaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:text="晒服装"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#333333"
+        android:clickable="true" />
+
+    <TextView
+        android:textColor="@color/pink"
+        android:id="@+id/tv_guanshuiqu_popup_pubaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="灌水区"
+        android:textSize="20sp" />
+
+</LinearLayout>

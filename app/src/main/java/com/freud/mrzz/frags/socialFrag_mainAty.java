@@ -1,5 +1,6 @@
 package com.freud.mrzz.frags;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.freud.mrzz.R;
 import com.freud.mrzz.views.ColorTrackView;
@@ -25,6 +27,7 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
     private communityFrag_socialFrag[] mFragments = new communityFrag_socialFrag[mTitles.length];
     private List<ColorTrackView> mTabs = new ArrayList<ColorTrackView>();
     private ColorTrackView id_tab_first_socialfrag,id_tab_second_socialfrag,id_tab_third_socialfrag;
+    private ImageView iv_pubTopic;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -92,14 +95,17 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
     }
     private void initViews(View view){
         vpSocial_mainAty = (ViewPager) view.findViewById(R.id.vpSocial_mainAty);
+        vpSocial_mainAty.setOffscreenPageLimit(3);
 
         id_tab_first_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_first_socialfrag);
         id_tab_second_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_second_socialfrag);
         id_tab_third_socialfrag = (ColorTrackView) view.findViewById(R.id.id_tab_third_socialfrag);
+        iv_pubTopic = (ImageView) view.findViewById(R.id.iv_publishtopic_socialfrag);
 
         id_tab_first_socialfrag.setOnClickListener(this);
         id_tab_second_socialfrag.setOnClickListener(this);
         id_tab_third_socialfrag.setOnClickListener(this);
+        iv_pubTopic.setOnClickListener(this);
 
         mTabs.add((ColorTrackView) view.findViewById(R.id.id_tab_first_socialfrag));
         mTabs.add((ColorTrackView) view.findViewById(R.id.id_tab_second_socialfrag));
@@ -109,20 +115,25 @@ public class socialFrag_mainAty extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View v) {
 
-        resetButtons();
-
         switch (v.getId()){
             case R.id.id_tab_first_socialfrag:
+                resetButtons();
                 mTabs.get(0).setProgress(1.0f);
                 vpSocial_mainAty.setCurrentItem(0,false);
                 break;
             case R.id.id_tab_second_socialfrag:
+                resetButtons();
                 mTabs.get(1).setProgress(1.0f);
                 vpSocial_mainAty.setCurrentItem(1,false);
                 break;
             case R.id.id_tab_third_socialfrag:
+                resetButtons();
                 mTabs.get(2).setProgress(1.0f);
                 vpSocial_mainAty.setCurrentItem(2,false);
+                break;
+            case R.id.iv_publishtopic_socialfrag:
+                Intent i = new Intent(getActivity(),com.freud.mrzz.atys.pubTopicActivity.class);
+                startActivity(i);
                 break;
         }
 

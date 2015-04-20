@@ -60,7 +60,7 @@
                 android:src="#ff6a6a6a" />
 
             <EditText
-                android:id="@+id/id_et_user_loginaty"
+                android:id="@+id/id_et_user_registeraty"
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -92,7 +92,7 @@
                 android:src="#ff6a6a6a" />
 
             <EditText
-                android:id="@+id/id_et_password_loginaty"
+                android:id="@+id/id_et_password_registeraty"
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -122,7 +122,7 @@
                 android:src="#ff6a6a6a" />
 
             <EditText
-                android:id="@+id/id_et_yanzhengma_loginaty"
+                android:id="@+id/id_et_yanzhengma_registeraty"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="45dp"
@@ -149,6 +149,7 @@
             android:text="隐私条款"
             android:textColor="#ff499ea4" />
         <TextView
+            android:id="@+id/tv_register_registeraty"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
