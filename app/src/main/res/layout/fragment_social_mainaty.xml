@@ -12,6 +12,7 @@
         >
 
         <ImageView
+            android:id="@+id/iv_publishtopic_socialfrag"
             android:layout_margin="9dp"
             android:layout_width="28dp"
             android:layout_height="28dp"

@@ -14,10 +14,12 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
 import com.freud.mrzz.R;
 import com.freud.mrzz.entity.Topic;
+import com.freud.mrzz.net.NetCore;
 import com.freud.mrzz.utils.T;
 import com.freud.mrzz.views.CircleImageView;
 
@@ -29,12 +31,24 @@ import java.util.List;
 public class TopicAdapter extends ArrayAdapter<Topic> {
     private int resource;
 
-    private String urlHead = "http://211.87.226.138:8088/floyid/forum/";
-    private String url_head_Head = "http://211.87.226.138:8088/floyid/login/";
+    private String urlHead = NetCore.URL_HEAD+"forum/";
+    private String url_head_Head = NetCore.URL_HEAD+"login/";
 
     private final static int IMAGE_FAIL=0;
 
     private RequestQueue mQuene;
+
+    private ImageLoader mImageLoader;
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case IMAGE_FAIL:
+                    T.showShort(getContext(),"下载失败");
+                    break;
+            }
+        }
+    };
 
     public TopicAdapter(Context context, int resource, List<Topic> objects) {
         super(context, resource, objects);
@@ -76,23 +90,10 @@ public class TopicAdapter extends ArrayAdapter<Topic> {
         ThreadImage mthreadImage = new ThreadImage(topic.getImageID_userhead(),topic.getImageID_content(),viewHolder);
         mthreadImage.run();
 
-           /* viewHolder.im_userhead.setImageResource(topic.getImageID_userhead());
-            viewHolder.im_content_first.setImageResource(topic.getImageID_content());*/
-
-
         return view;
     }
 
-    Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what){
-                case IMAGE_FAIL:
-                    T.showShort(getContext(),"下载失败");
-                    break;
-            }
-        }
-    };
+
 
     class ThreadImage extends Thread{
         String url_head;
@@ -111,7 +112,6 @@ public class TopicAdapter extends ArrayAdapter<Topic> {
                     new Response.Listener<Bitmap>() {
                         @Override
                         public void onResponse(Bitmap response) {
-                   //         mHandler.obtainMessage(IMAGE_HEAD_SUCCESS,response).sendToTarget();
                             viewHolder.im_userhead.setImageBitmap(response);
                         }
                     }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
@@ -125,7 +125,6 @@ public class TopicAdapter extends ArrayAdapter<Topic> {
                     new Response.Listener<Bitmap>() {
                         @Override
                         public void onResponse(Bitmap response) {
-                    //        mHandler.obtainMessage(IMAGE_CONTENT_SUCCESS,response).sendToTarget();
                             viewHolder.im_content_first.setImageBitmap(response);
                         }
                     }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {

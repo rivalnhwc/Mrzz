@@ -25,6 +25,7 @@ import com.freud.mrzz.R;
 import com.freud.mrzz.adapter.TopicAdapter;
 import com.freud.mrzz.entity.Topic;
 import com.freud.mrzz.entity.TopicLists;
+import com.freud.mrzz.net.NetCore;
 import com.freud.mrzz.utils.T;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
@@ -57,7 +58,7 @@ public class communityFrag_socialFrag extends Fragment {
     private static final int MSG_SUCCESS = 0;//获取图片成功的标识
     private static final int MSG_FAILURE = 1;//获取图片失败的标识
 
-    private static final String mUrl = "http://211.87.226.138:8088/floyid/forum/get_topic_list.php";
+    private static final String mUrl = NetCore.URL_HEAD+"forum/get_topic_list.php";
 
     Handler mHandler = new Handler() {
 
@@ -138,7 +139,7 @@ public class communityFrag_socialFrag extends Fragment {
         mPulltoRefreshListView = (PullToRefreshListView) view.findViewById(R.id.id_pull_refresh_list_commufrag);
         mPulltoRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
 
-        ILoadingLayout startLables = mPulltoRefreshListView.getLoadingLayoutProxy(true, false);
+        final ILoadingLayout startLables = mPulltoRefreshListView.getLoadingLayoutProxy(true, false);
         startLables.setPullLabel("下拉刷新");
         startLables.setRefreshingLabel("正在努力刷新...");
         startLables.setReleaseLabel("松手刷新");
@@ -179,9 +180,8 @@ public class communityFrag_socialFrag extends Fragment {
                 // 显示最后更新的时间
                 refreshView.getLoadingLayoutProxy()
                         .setLastUpdatedLabel(label);
-                //        new GetDataTask().execute();
-                mThread = new Thread(runnablePull);
-                mThread.start();//线程启动
+                startLoad();
+
             }
 
             @Override
@@ -196,9 +196,7 @@ public class communityFrag_socialFrag extends Fragment {
                 // 显示最后更新的时间
                 refreshView.getLoadingLayoutProxy()
                         .setLastUpdatedLabel(label);
-                //    new GetDataTask().execute();
-                mThread = new Thread(runnablePull);
-                mThread.start();//线程启动
+                startLoad();
             }
         });
     }
@@ -211,44 +209,40 @@ public class communityFrag_socialFrag extends Fragment {
         return tabFragment;
     }
 
-    Runnable runnablePull = new Runnable() {
-        @Override
-        public void run() {
+    private void startLoad(){
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(mUrl, null,
+                new Response.Listener<JSONObject>() {
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(mUrl, null,
-                    new Response.Listener<JSONObject>() {
-
-                        @Override
-                        public void onResponse(final JSONObject response) {
-                            mHandler.obtainMessage(MSG_SUCCESS, response.toString()).sendToTarget();
-                        }
-
-                    }, new Response.ErrorListener() {
-
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.d("TAG", error.getMessage(), error);
-                }
-            }) {
-
-                @Override
-                protected Response<JSONObject> parseNetworkResponse(
-                        NetworkResponse response) {
-
-                    try {
-                        JSONObject jsonObject = new JSONObject(
-                                new String(response.data, "UTF-8"));
-                        return Response.success(jsonObject, HttpHeaderParser.parseCacheHeaders(response));
-                    } catch (UnsupportedEncodingException e) {
-                        return Response.error(new ParseError(e));
-                    } catch (Exception je) {
-                        return Response.error(new ParseError(je));
+                    @Override
+                    public void onResponse(final JSONObject response) {
+                        mHandler.obtainMessage(MSG_SUCCESS, response.toString()).sendToTarget();
                     }
-                }
 
-            };
-            mQuene.add(jsonObjectRequest);
-        }
-    };
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("TAG", error.getMessage(), error);
+            }
+        }) {
+
+            @Override
+            protected Response<JSONObject> parseNetworkResponse(
+                    NetworkResponse response) {
+
+                try {
+                    JSONObject jsonObject = new JSONObject(
+                            new String(response.data, "UTF-8"));
+                    return Response.success(jsonObject, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    return Response.error(new ParseError(e));
+                } catch (Exception je) {
+                    return Response.error(new ParseError(je));
+                }
+            }
+
+        };
+        mQuene.add(jsonObjectRequest);
+    }
 
 }
