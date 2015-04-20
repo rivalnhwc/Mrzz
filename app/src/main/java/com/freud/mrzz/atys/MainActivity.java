@@ -6,6 +6,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.freud.mrzz.R;
 import com.freud.mrzz.frags.clothFrag_mainAty;
@@ -16,8 +19,11 @@ import com.freud.mrzz.frags.socialFrag_mainAty;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
-    private ImageButton btn_bottom_tab_index_mainAty, btn_bottom_tab_cloth_mainAty,
+    private ImageView btn_bottom_tab_index_mainAty, btn_bottom_tab_cloth_mainAty,
             btn_bottom_tab_makeup_mainAty, btn_bottom_tab_social_mainAty;
+
+    LinearLayout index,cloth,makeup,social;
+    TextView tv_index,tv_cloth,tv_makeup,tv_social;
 
     private indexFrag_mainAty indexFrag;
     private clothFrag_mainAty clothFrag;
@@ -35,15 +41,26 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private void initView() {
 
-        btn_bottom_tab_index_mainAty = (ImageButton) findViewById(R.id.btn_bottom_tab_index_mainAty);
-        btn_bottom_tab_cloth_mainAty = (ImageButton) findViewById(R.id.btn_bottom_tab_cloth_mainAty);
-        btn_bottom_tab_makeup_mainAty = (ImageButton) findViewById(R.id.btn_bottom_tab_makeup_mainAty);
-        btn_bottom_tab_social_mainAty = (ImageButton) findViewById(R.id.btn_bottom_tab_social_mainAty);
+        index=(LinearLayout) findViewById(R.id.ll_bottom_tab_index);
+        cloth=(LinearLayout) findViewById(R.id.ll_bottom_tab_cloth);
+        makeup=(LinearLayout) findViewById(R.id.ll_bottom_tab_makeup);
+        social=(LinearLayout) findViewById(R.id.ll_bottom_tab_social);
 
-        btn_bottom_tab_index_mainAty.setOnClickListener(this);
-        btn_bottom_tab_cloth_mainAty.setOnClickListener(this);
-        btn_bottom_tab_makeup_mainAty.setOnClickListener(this);
-        btn_bottom_tab_social_mainAty.setOnClickListener(this);
+
+        btn_bottom_tab_index_mainAty = (ImageView) findViewById(R.id.btn_bottom_tab_index_mainAty);
+        btn_bottom_tab_cloth_mainAty = (ImageView) findViewById(R.id.btn_bottom_tab_cloth_mainAty);
+        btn_bottom_tab_makeup_mainAty = (ImageView) findViewById(R.id.btn_bottom_tab_makeup_mainAty);
+        btn_bottom_tab_social_mainAty = (ImageView) findViewById(R.id.btn_bottom_tab_social_mainAty);
+
+        tv_index=(TextView) findViewById(R.id.tv_bottom_tab_index_mainAty);
+        tv_cloth=(TextView) findViewById(R.id.tv_bottom_tab_cloth_mainAty);
+        tv_makeup=(TextView) findViewById(R.id.tv_bottom_tab_makeup_mainAty);
+        tv_social=(TextView) findViewById(R.id.tv_bottom_tab_social_mainAty);
+
+        index.setOnClickListener(this);
+        cloth.setOnClickListener(this);
+        makeup.setOnClickListener(this);
+        social.setOnClickListener(this);
 //设置默认Fragment
         setDefaultFrag();
 
@@ -68,11 +85,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         resetButton();
 
         switch (v.getId()) {
-            case R.id.btn_bottom_tab_index_mainAty:
-                btn_bottom_tab_index_mainAty.setImageResource(R.drawable.tab_weixin_pressed);
+            case R.id.ll_bottom_tab_index:
                 if (indexFrag.isVisible()) {
 
                 } else {
+                    tv_index.setTextColor(getResources().getColor(R.color.pink));
+                    btn_bottom_tab_index_mainAty.setImageResource(R.drawable.tab_home_select);
                     hideVisualfrag(transaction);
                     if (indexFrag != null) {
                         if (indexFrag.isHidden()) {
@@ -88,11 +106,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     }
                 }
                 break;
-            case R.id.btn_bottom_tab_cloth_mainAty:
-                btn_bottom_tab_cloth_mainAty.setImageResource(R.drawable.tab_address_pressed2);
+            case R.id.ll_bottom_tab_cloth:
                 if (clothFrag.isVisible()) {
 
                 } else {
+                    tv_cloth.setTextColor(getResources().getColor(R.color.pink));
+                    btn_bottom_tab_cloth_mainAty.setImageResource(R.drawable.tab_cloth_select);
                     hideVisualfrag(transaction);
                     if (clothFrag != null) {
                         if (clothFrag.isHidden()) {
@@ -108,11 +127,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     }
                 }
                 break;
-            case R.id.btn_bottom_tab_makeup_mainAty:
-                btn_bottom_tab_makeup_mainAty.setImageResource(R.drawable.tab_settings_pressed2);
+            case R.id.ll_bottom_tab_makeup:
                 if (makeupFrag.isVisible()) {
 
                 } else {
+                    tv_makeup.setTextColor(getResources().getColor(R.color.pink));
+                    btn_bottom_tab_makeup_mainAty.setImageResource(R.drawable.tab_makeup_select);
                     hideVisualfrag(transaction);
                     if (makeupFrag != null) {
                         if (makeupFrag.isHidden()) {
@@ -128,11 +148,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     }
                 }
                 break;
-            case R.id.btn_bottom_tab_social_mainAty:
-                btn_bottom_tab_social_mainAty.setImageResource(R.drawable.tab_find_frd_press2);
+            case R.id.ll_bottom_tab_social:
+
                 if (socialFrag.isVisible()) {
 
                 } else {
+                    tv_social.setTextColor(getResources().getColor(R.color.pink));
+                    btn_bottom_tab_social_mainAty.setImageResource(R.drawable.tab_social_select);
                     hideVisualfrag(transaction);
                     if (socialFrag != null) {
                         if (socialFrag.isHidden()) {
@@ -155,10 +177,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private void resetButton() {
         //button恢复未点击状态
-        btn_bottom_tab_index_mainAty.setImageResource(R.drawable.tab_weixin_normal);
-        btn_bottom_tab_cloth_mainAty.setImageResource(R.drawable.tab_address_normal);
-        btn_bottom_tab_makeup_mainAty.setImageResource(R.drawable.tab_settings_normal);
-        btn_bottom_tab_social_mainAty.setImageResource(R.drawable.tab_find_frd_normal);
+        btn_bottom_tab_index_mainAty.setImageResource(R.drawable.tab_home_unselect);
+        btn_bottom_tab_cloth_mainAty.setImageResource(R.drawable.tab_cloth_unselect);
+        btn_bottom_tab_makeup_mainAty.setImageResource(R.drawable.tab_makeup_unselect);
+        btn_bottom_tab_social_mainAty.setImageResource(R.drawable.tab_social_unselect);
+
+        tv_index.setTextColor(getResources().getColor(R.color.black));
+        tv_cloth.setTextColor(getResources().getColor(R.color.black));
+        tv_makeup.setTextColor(getResources().getColor(R.color.black));
+        tv_social.setTextColor(getResources().getColor(R.color.black));
+
     }
 
     private void hideVisualfrag(FragmentTransaction transaction) {

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="肤色"
+        android:textSize="36dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:paddingBottom="50dp"
+        android:layout_height="370dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_color1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="象牙白"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/color_xiangyabai"
+                    android:id="@+id/iv_color1"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color1"
+                    android:scaleType="fitXY"
+                    android:tag="1"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check1"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color1"
+                    android:adjustViewBounds="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/tv_color2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暖杏色"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/color_nuanxingse"
+                    android:id="@+id/iv_color2"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color2"
+                    android:scaleType="fitXY"
+                    android:tag="2"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check2"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color2"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/tv_color3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉嫩色"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/color_fennense"
+                    android:id="@+id/iv_color3"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color3"
+                    android:scaleType="fitXY"
+                    android:tag="3"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check3"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color3"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_color4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自然色"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_color4"
+                    android:src="@drawable/color_ziranse"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color4"
+                    android:scaleType="fitXY"
+                    android:tag="4"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check4"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color4"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_color5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胭脂粉"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_color5"
+                    android:src="@drawable/color_yanzhifen"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color5"
+                    android:scaleType="fitXY"
+                    android:tag="5"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check5"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color5"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_color6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="麦芽色"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_color6"
+                    android:src="@drawable/color_yanzhifen"
+                    android:adjustViewBounds="true"
+                    android:layout_above="@id/tv_color6"
+                    android:scaleType="fitXY"
+                    android:tag="6"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/iv_color_check6"
+                    android:src="@drawable/checked"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/iv_color6"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_test"
+    tools:context="com.freud.mrzz.atys.TestActivity">
+
+    <com.freud.mrzz.views.MyViewPager
+        android:id="@+id/pager_testaty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="top|center_horizontal">
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="2dp"
+            android:id="@+id/iv_indicater1"
+            android:src="@drawable/indicater_selected"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="2dp"
+            android:id="@+id/iv_indicater2"
+            android:src="@drawable/indicater_unselected"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="2dp"
+            android:id="@+id/iv_indicater3"
+            android:src="@drawable/indicater_unselected"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="2dp"
+            android:id="@+id/iv_indicater4"
+            android:src="@drawable/indicater_unselected"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="2dp"
+            android:id="@+id/iv_indicater5"
+            android:src="@drawable/indicater_unselected"/>
+    </LinearLayout>
+
+</RelativeLayout>
