@@ -19,6 +19,6 @@
         android:id="@+id/id_Content_mainAty"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:layout_above="@id/tv_divider_mainaty"></FrameLayout>
 </RelativeLayout>

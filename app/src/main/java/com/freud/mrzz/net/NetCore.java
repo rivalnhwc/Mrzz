@@ -37,11 +37,11 @@ import java.util.List;
 public class NetCore
 {
 
-    public static final String ServerAddr = "http://211.87.226.138:8088/floyid/clothes/";
+    public static final String ServerAddr = "http://211.87.226.133:8088/floyid/clothes/";
+    public static final String URL_HEAD = "http://211.87.226.133:8088/floyid/";
 
     private final String LoginAddr = ServerAddr + "login";
     private final String get_cloth_category_one_addr = ServerAddr + "get_cloth_category_one.php";
-    public static final String URL_HEAD = "http://211.87.226.133:8088/floyid/";
 
 
 
@@ -137,58 +137,6 @@ public class NetCore
         }
     }
 
-    private String UploadAvata(String url,String sessionId, String sessionToken, String parentId, String pupilId, String file) throws ClientProtocolException, IOException
-    {
-        HttpPost httpRequest = new HttpPost(url);
-        FileBody fileBody = new FileBody(new File(file));
-        StringBody session_Id = new StringBody(sessionId);
-        StringBody session_Token = new StringBody(sessionToken);
-        StringBody parent_Id = new StringBody(parentId);
-        StringBody pupil_Id = new StringBody(pupilId);
-        MultipartEntity entity = new MultipartEntity();
-        entity.addPart("file", fileBody);
-        entity.addPart("sessionId", session_Id);
-        entity.addPart("sessionToken", session_Token);
-        entity.addPart("parentId", parent_Id);
-        entity.addPart("pupilId", pupil_Id);
-
-        httpRequest.setEntity(entity);
-        HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
-        String jsonData = "";
-        if (httpResponse.getStatusLine().getStatusCode() == 200)
-        {
-            InputStream is = httpResponse.getEntity().getContent();
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            String line = "";
-            while ((line = br.readLine()) != null)
-            {
-                jsonData += line + "\r\n";
-            }
-        }
-        return jsonData;
-    }
-    public String UploadAvatatest(String url,String file) throws ClientProtocolException, IOException
-    {
-        HttpPost httpRequest = new HttpPost(url);
-        FileBody fileBody = new FileBody(new File(file));
-        MultipartEntity entity = new MultipartEntity();
-        entity.addPart("file", fileBody);
-
-        httpRequest.setEntity(entity);
-        HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
-        String jsonData = "";
-
-            InputStream is = httpResponse.getEntity().getContent();
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            String line = "";
-            while ((line = br.readLine()) != null)
-            {
-                jsonData += line + "\r\n";
-            }
-
-        return jsonData;
-    }
-
     public static void httpPostMethod(String url, JSONObject json, Handler handler)
             throws UnsupportedEncodingException, IOException,
             ClientProtocolException {
@@ -221,5 +169,26 @@ public class NetCore
         }
     }
 
+    public String UploadAvatatest(String url,String file) throws ClientProtocolException, IOException
+    {
+        HttpPost httpRequest = new HttpPost(url);
+        FileBody fileBody = new FileBody(new File(file));
+        MultipartEntity entity = new MultipartEntity();
+        entity.addPart("file", fileBody);
+
+        httpRequest.setEntity(entity);
+        HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
+        String jsonData = "";
+
+        InputStream is = httpResponse.getEntity().getContent();
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+        String line = "";
+        while ((line = br.readLine()) != null)
+        {
+            jsonData += line + "\r\n";
+        }
+
+        return jsonData;
+    }
 
 }
